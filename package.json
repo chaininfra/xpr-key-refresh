@@ -1,0 +1,35 @@
+{
+  "name": "xpr-key-refresh",
+  "version": "1.0.0",
+  "description": "Global private key refresh tool using Proton CLI",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "xpr-refresh": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "example": "node examples/basic-example.js"
+  },
+  "keywords": [
+    "proton",
+    "key-management",
+    "private-key",
+    "key-refresh",
+    "openpgp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
+

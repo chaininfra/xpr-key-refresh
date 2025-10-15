@@ -26,7 +26,7 @@ const execAsync = promisify(exec);
  * @returns {string} return.account - Account name
  * @returns {string} return.permission - Permission that was updated
  * @returns {string|null} return.transactionId - Transaction ID or null if not found
- * @returns {string|null} return.transactionLink - ProtonScan link or null if no transaction ID
+ * @returns {string|null} return.transactionLink - explorer link or null if no transaction ID
  * @returns {string} return.newPublicKey - The new public key
  * @returns {string} return.output - Raw output from Proton CLI (on success)
  * @returns {string} return.error - Error message (on failure)
@@ -90,7 +90,7 @@ async function updateAuth(account, newPublicKey, permission = 'active') {
       account,
       permission,
       transactionId,
-      transactionLink: transactionId ? `https://protonscan.io/transaction/${transactionId}` : null,
+      transactionLink: transactionId ? `https://explorer.xprnetwork.org/transaction/${transactionId}` : null,
       newPublicKey,
       output: stdout
     };

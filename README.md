@@ -1,4 +1,3 @@
-```markdown
 # XPR Key Refresh
 
 Update Proton blockchain account permissions via `updateauth` action.
@@ -17,7 +16,7 @@ npm install
 node refresh-key.js <account> <newPublicKey> [permission]
 
 # Example
-node refresh-key.js dcdoit PUB_K1_6aEZ3qzrzG4xniJXTm79RUQfKYmFGsH2UfgbvMVBAeNZJJYTsu active
+node refresh-key.js chaininfra PUB_K1_6aEZ3qzrzG4xniJXTm79RUQfKYmFGsH2UfgbvMVBAeNZJJYTsu active
 ```
 
 ## Requirements
@@ -63,7 +62,7 @@ proton action eosio updateauth '{
 ```json
 {
   "success": true,
-  "account": "dcdoit",
+  "account": "chaininfra",
   "permission": "active",
   "transactionId": "8a4f2c1b3d5e6f7a...",
   "transactionLink": "https://explorer.xprnetwork.org/transaction/8a4f2c1b...",
@@ -161,7 +160,7 @@ async function updateKey(account, pubKey, permission = 'active') {
 }
 
 // Usage
-const result = await updateKey('dcdoit', 'PUB_K1_...', 'active');
+const result = await updateKey('chaininfra', 'PUB_K1_...', 'active');
 console.log(result.transactionId);
 ```
 
@@ -209,4 +208,3 @@ Node.js built-ins only:
 ## License
 
 MIT
-```

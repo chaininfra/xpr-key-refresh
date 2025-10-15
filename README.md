@@ -1,6 +1,11 @@
+```markdown
 # XPR Key Refresh
 
 Update Proton blockchain account permissions via `updateauth` action.
+
+## ⚠️ Important Warning
+
+**If you change your owner key for your WebAuth Wallet account, you could lose access to your Metal Blockchain and other connected network wallets until it's restored.** Only modify the owner key if you fully understand the implications and have proper backups.
 
 ## Quick Start
 
@@ -61,7 +66,7 @@ proton action eosio updateauth '{
   "account": "dcdoit",
   "permission": "active",
   "transactionId": "8a4f2c1b3d5e6f7a...",
-  "transactionLink": "https://protonscan.io/transaction/8a4f2c1b...",
+  "transactionLink": "https://explorer.xprnetwork.org/transaction/8a4f2c1b...",
   "newPublicKey": "PUB_K1_..."
 }
 ```
@@ -174,6 +179,7 @@ console.log(result.transactionId);
 - Keys managed by Proton CLI
 - No input sanitization (command injection risk)
 - Debug output logs full command
+- **WebAuth Wallet Warning**: Changing owner keys can affect access to connected wallets
 
 ## Verification
 
@@ -185,7 +191,7 @@ proton account myaccount
 proton account myaccount
 
 # Or explorer
-open https://protonscan.io/account/myaccount
+open https://explorer.xprnetwork.org/account/myaccount
 ```
 
 ## Architecture
@@ -203,3 +209,4 @@ Node.js built-ins only:
 ## License
 
 MIT
+```

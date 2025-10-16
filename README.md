@@ -22,7 +22,7 @@ node refresh-key.js dcdoit PUB_K1_6aEZ3qzrzG4xniJXTm79RUQfKYmFGsH2UfgbvMVBAeNZJJ
 ## Requirements
 
 - Node.js >= 16.0.0
-- XPR Network CLI: `npm install -g @proton/cli`
+- proton-cli: `npm install -g @proton/cli`
 - Private key in `proton key:list`
 
 ## Parameters
@@ -139,7 +139,7 @@ rm key.json
 
 | Error | Cause | Fix |
 |-------|-------|-----|
-| `command action not found` | XPR Network CLI missing | `npm i -g @proton/cli` |
+| `command action not found` | proton-cli missing | `npm i -g @proton/cli` |
 | `unrecognized public key format` | Used PVT instead of PUB | Use public key |
 | `Missing required authority` | Key not in list | `proton key:add` |
 | No transaction ID | Parse failed | Check manually |
@@ -196,7 +196,7 @@ open https://explorer.xprnetwork.org/account/myaccount
 ## Architecture
 
 ```
-CLI Input → Parse → Build JSON → Execute XPR Network CLI → Parse TX ID → Output JSON
+CLI Input → Parse → Build JSON → proton-cli → Parse TX ID → Output JSON
 ```
 
 ## Dependencies

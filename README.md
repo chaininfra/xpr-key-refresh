@@ -1,6 +1,6 @@
 # XPR Key Refresh
 
-Update XPR Network account permissions via `updateauth` action.
+Update XPR Network blockchain account permissions via `updateauth` action.
 
 ## ⚠️ Important Warning
 
@@ -22,14 +22,14 @@ node refresh-key.js dcdoit PUB_K1_6aEZ3qzrzG4xniJXTm79RUQfKYmFGsH2UfgbvMVBAeNZJJ
 ## Requirements
 
 - Node.js >= 16.0.0
-- Proton CLI: `npm install -g @proton/cli`
+- XPR Network CLI: `npm install -g @proton/cli`
 - Private key in `proton key:list`
 
 ## Parameters
 
 | Parameter | Required | Description | Default |
 |-----------|----------|-------------|---------|
-| `account` | Yes | Proton account name | - |
+| `account` | Yes | XPR Network account name | - |
 | `newPublicKey` | Yes | New public key (PUB_K1_...) | - |
 | `permission` | No | Permission: active or owner | active |
 
@@ -139,7 +139,7 @@ rm key.json
 
 | Error | Cause | Fix |
 |-------|-------|-----|
-| `command action not found` | Proton CLI missing | `npm i -g @proton/cli` |
+| `command action not found` | XPR Network CLI missing | `npm i -g @proton/cli` |
 | `unrecognized public key format` | Used PVT instead of PUB | Use public key |
 | `Missing required authority` | Key not in list | `proton key:add` |
 | No transaction ID | Parse failed | Check manually |
@@ -175,7 +175,7 @@ console.log(result.transactionId);
 ## Security Notes
 
 - Script does NOT handle private keys
-- Keys managed by Proton CLI
+- Keys managed by XPR Network CLI
 - No input sanitization (command injection risk)
 - Debug output logs full command
 - **WebAuth Wallet Warning**: Changing owner keys can affect access to connected wallets
@@ -196,7 +196,7 @@ open https://explorer.xprnetwork.org/account/myaccount
 ## Architecture
 
 ```
-CLI Input → Parse → Build JSON → Execute Proton CLI → Parse TX ID → Output JSON
+CLI Input → Parse → Build JSON → Execute XPR Network CLI → Parse TX ID → Output JSON
 ```
 
 ## Dependencies

@@ -1,6 +1,6 @@
 # XPR Key Refresh
 
-Update Proton blockchain account permissions via `updateauth` action.
+Update XPR Network account permissions via `updateauth` action.
 
 ## ⚠️ Important Warning
 
